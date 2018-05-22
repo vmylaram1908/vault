@@ -1,0 +1,7 @@
+DEPENDENCIES
+  vault
+    path: .
+    metadata: true
+
+GRAPH
+  vault (1.0.0)

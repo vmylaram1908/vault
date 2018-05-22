@@ -1,0 +1,18 @@
+[Unit]
+Description=Vault Server
+
+[Service]
+Type=simple
+User=vault
+LimitNOFILE=32768
+Restart=on-failure
+Environment=VAULT_HEAP_OPTS=-Xmx"<%= node['vault']['memory']%>"
+RuntimeDirectory=vault
+ExecStart=<%= node['vault']['install']%>/vault server -config=<%= node['vault']['install']%>/server.hcl -log-level=info
+Restart=always
+RestartSec=30
+StartLimitInterval=200
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+---
+username: kitchen
+ssh_key: "/Users/is_2117/Desktop/Desktop/kpWorkspace/vault/.kitchen/docker_id_rsa"
+image_id: 2536d41203b9
+container_id: 685162eae938cf79be53d97f11a5f29c48bc70a9a412fa1e3d12c98ed0248b90
+hostname: localhost
+port: 32768
+last_action: create
+last_error: Kitchen::ActionFailed

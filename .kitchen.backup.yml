@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["private_network", {ip: "192.168.51.51"}]
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: "13"
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7.3
+  - name: rhel7_gen2
+transport:
+  name: ssh
+suites:
+  - name: default
+    run_list:
+      - recipe[vault::default]
+    verifier:
+      inspec_tests:
+        - test/integration/vault
+    attributes:

@@ -1,0 +1,27 @@
+---
+
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  deprecations_as_errors: true
+
+verifier:
+  name: inspec
+
+# Customize the following sections for the platforms & suites specific to your cookbook! This is just an example
+
+platforms:
+- name: centos-7
+  driver:
+    image: centos:7
+
+suites:
+  - name: default
+    run_list:
+      - recipe[vault::default]
+    verifier:
+      inspec_tests:
+        - test/integration/vault
+    attributes:

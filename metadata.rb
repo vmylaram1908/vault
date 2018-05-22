@@ -1,0 +1,6 @@
+name 'vault'
+maintainer 'Vamshi Mylaram'
+maintainer_email 'vamshi.mylaram@kp.org'
+license 'All Rights Kasier Permanente Reserved'
+description 'Installs/Configures hashicorpVault'
+version '1.0.0'

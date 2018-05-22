@@ -1,0 +1,7 @@
+---
+hostname: 127.0.0.1
+port: '2201'
+username: vagrant
+ssh_key: "/Users/is_2117/Desktop/Desktop/kpWorkspace/vault/.kitchen/kitchen-vagrant/default-centos-73/.vagrant/machines/default/virtualbox/private_key"
+last_action: converge
+last_error: 
